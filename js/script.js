@@ -73,12 +73,13 @@ function updateCarosel(){
 nextButton.addEventListener('click',
     function(){
         if(index < images.length){
-            index = index + 1;
+            index++;
             console.log(index);
             updateCarosel();
         }else{
             index=0;
             console.log(index);
+            updateCarosel();
         }
     }
 )
@@ -87,12 +88,13 @@ nextButton.addEventListener('click',
 prevButton.addEventListener('click',
     function(){
         if(index > 0){
-            index = index - 1;
+            index++;
             console.log(index);
             updateCarosel();
         }else{
-            index = images.length-1;
+            index = images.length;
             console.log(index);
+            updateCarosel();
         }
     }
 )
