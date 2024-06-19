@@ -14,16 +14,7 @@
 // Aggiungere bottoni di start/stop e di inversione del meccanismo di autoplay.
 // Buon lavoro e buon divertimento!
 
-
-// // creo l'array immagini
-// const imgArray = [
-//     'img/01.webp',
-//     'img/02.webp',
-//     'img/03.webp',
-//     'img/04.webp',
-//     'img/05.webp'
-// ]
-
+// Creare un carosello come nella foto allegata.
 const images = [
     { 
         image: 'img/01.webp',
@@ -48,6 +39,26 @@ const images = [
         text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
 
      } ];
+
+// Milestone 1:
+// Ora rimuoviamo i contenuti statici e usiamo l’array di oggetti letterali per popolare dinamicamente il carosello.   Al click dell’utente sulle frecce verso sinistra o destra, l’immagine attiva diventerà visibile e dovremo aggiungervi titolo e testo.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // // collego l'elemento container
 // const container = document.querySelector('.container');

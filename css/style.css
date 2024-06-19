@@ -30,10 +30,19 @@ img {
     width: 75%;
     border: 1px solid black;
     overflow: hidden;
+    position: relative;
 
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.text-box{
+    text-align: right;
+    color: white;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
 }
 
 .sidebar{
