@@ -14,6 +14,12 @@
 // Aggiungere bottoni di start/stop e di inversione del meccanismo di autoplay.
 // Buon lavoro e buon divertimento!
 
+// creo una funzione per updatare il carosello all'interno dei bottoni
+function updateCarosel(){
+    img.setAttribute('src', images[index].image);
+    title.textContent = images[index].title;
+    text.textContent = images[index].text;
+}
 // Creare un carosello come nella foto allegata.
 const images = [
     { 
@@ -59,20 +65,15 @@ const prevButton = document.querySelector('.prev-img')
 
 let index = 0;
 
+updateCarosel();
 
 
-// creo una funzione per updatare il carosello all'interno dei bottoni
-function updateCarosel(){
-    img.setAttribute('src', images[index].image);
-    title.textContent = images[index].title;
-    text.textContent = images[index].text;
-}
 
 // ad ogni click del mouse l'immagine e il testo dovranno cambiare l'indice
 // funzione pulsante next
 nextButton.addEventListener('click',
     function(){
-        if(index < images.length){
+        if(index < images.length - 1){
             index++;
             console.log(index);
             updateCarosel();
@@ -88,11 +89,11 @@ nextButton.addEventListener('click',
 prevButton.addEventListener('click',
     function(){
         if(index > 0){
-            index++;
+            index--;
             console.log(index);
             updateCarosel();
         }else{
-            index = images.length;
+            index = images.length - 1;
             console.log(index);
             updateCarosel();
         }
