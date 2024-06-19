@@ -45,27 +45,37 @@ const images = [
 // Al click dell’utente sulle frecce verso sinistra o destra, l’immagine attiva diventerà visibile e dovremo aggiungervi titolo e testo.
 
 // collego l'elemento container
-const container = document.querySelector('.container');
+const container = document.querySelector('.box-img');
 // collego elementi sottotitoli
+const img = document.createElement('img')
 const title = document.querySelector('.title')
 const text = document.querySelector('.text')
+
+// collego i figli img title e text al container
+container.appendChild(img);
 // collego bottoni
 const nextButton = document.querySelector('.next-img')
 const prevButton = document.querySelector('.prev-img')
 
-// prelevo l'immagine dall'array
-let index= 0;
+let index = 0;
 
-let bigImage = images[index];
 
-// ad ogni click del mouse l'immagine dovrà cambiare l'indice
 
+// creo una funzione per updatare il carosello all'interno dei bottoni
+function updateCarosel(){
+    img.setAttribute('src', images[index].image);
+    title.textContent = images[index].title;
+    text.textContent = images[index].text;
+}
+
+// ad ogni click del mouse l'immagine e il testo dovranno cambiare l'indice
 // funzione pulsante next
 nextButton.addEventListener('click',
     function(){
         if(index < images.length){
             index = index + 1;
             console.log(index);
+            updateCarosel();
         }else{
             index=0;
             console.log(index);
@@ -79,12 +89,15 @@ prevButton.addEventListener('click',
         if(index > 0){
             index = index - 1;
             console.log(index);
+            updateCarosel();
         }else{
-            index = images.length;
+            index = images.length-1;
             console.log(index);
         }
     }
 )
+
+
 
 
 
