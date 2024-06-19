@@ -18,7 +18,7 @@
 const images = [
     { 
         image: 'img/01.webp',
-        title: 'Marvel\'s Spiderman Miles Morale',
+        title: 'Marvel\'s Spiderman Miles Morales',
         text: 'Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.', },
     { 
         image: 'img/02.webp',
@@ -53,10 +53,41 @@ const text = document.querySelector('.text')
 const nextButton = document.querySelector('.next-img')
 const prevButton = document.querySelector('.prev-img')
 
-// creo il ciclo per prelevare gli elementi vari dall'array
-images.forEach(element => {
-    console.log(element.title);
-});
+// prelevo l'immagine dall'array
+let index= 0;
+
+let bigImage = images[index];
+
+// ad ogni click del mouse l'immagine dovrà cambiare l'indice
+
+// funzione pulsante next
+nextButton.addEventListener('click',
+    function(){
+        if(index < images.length){
+            index = index + 1;
+            console.log(index);
+        }else{
+            index=0;
+            console.log(index);
+        }
+    }
+)
+
+// funzione pulsante prev
+prevButton.addEventListener('click',
+    function(){
+        if(index > 0){
+            index = index - 1;
+            console.log(index);
+        }else{
+            index = images.length;
+            console.log(index);
+        }
+    }
+)
+
+
+
 
 
 
