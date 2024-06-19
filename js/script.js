@@ -41,7 +41,22 @@ const images = [
      } ];
 
 // Milestone 1:
-// Ora rimuoviamo i contenuti statici e usiamo l’array di oggetti letterali per popolare dinamicamente il carosello.   Al click dell’utente sulle frecce verso sinistra o destra, l’immagine attiva diventerà visibile e dovremo aggiungervi titolo e testo.
+// Ora rimuoviamo i contenuti statici e usiamo l’array di oggetti letterali per popolare dinamicamente il carosello.   
+// Al click dell’utente sulle frecce verso sinistra o destra, l’immagine attiva diventerà visibile e dovremo aggiungervi titolo e testo.
+
+// collego l'elemento container
+const container = document.querySelector('.container');
+// collego elementi sottotitoli
+const title = document.querySelector('.title')
+const text = document.querySelector('.text')
+// collego bottoni
+const nextButton = document.querySelector('.next-img')
+const prevButton = document.querySelector('.prev-img')
+
+// creo il ciclo per prelevare gli elementi vari dall'array
+images.forEach(element => {
+    console.log(element.title);
+});
 
 
 
@@ -60,8 +75,9 @@ const images = [
 
 
 
-// // collego l'elemento container
-// const container = document.querySelector('.container');
+
+
+
 
 // // creo il ciclo per prelevare gli elementi dall'array
 // for(let i = 0; i < imgArray.length; i++){
